@@ -14,6 +14,25 @@ from taxjar_integration.taxjar_integration.taxjar_integration import get_client
 
 
 class TaxJarSettings(Document):
+	# begin: auto-generated types
+	# This code is auto-generated. Do not modify anything in this block.
+
+	from typing import TYPE_CHECKING
+
+	if TYPE_CHECKING:
+		from frappe.types import DF
+		from taxjar_integration.taxjar_integration.doctype.taxjar_nexus.taxjar_nexus import TaxJarNexus
+
+		api_key: DF.Password
+		company: DF.Link | None
+		is_sandbox: DF.Check
+		nexus: DF.Table[TaxJarNexus]
+		sandbox_api_key: DF.Password | None
+		shipping_account_head: DF.Link
+		tax_account_head: DF.Link
+		taxjar_calculate_tax: DF.Check
+		taxjar_create_transactions: DF.Check
+	# end: auto-generated types
 	def on_update(self):
 		TAXJAR_CREATE_TRANSACTIONS = self.taxjar_create_transactions
 		TAXJAR_CALCULATE_TAX = self.taxjar_calculate_tax
