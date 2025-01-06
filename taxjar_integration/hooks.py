@@ -106,7 +106,7 @@ doc_events = {
 	"Sales Invoice": {
 		"on_submit": "taxjar_integration.taxjar_integration.taxjar_integration.create_transaction",
 		"on_cancel": "taxjar_integration.taxjar_integration.taxjar_integration.delete_transaction",
-		"on_trash": "method"
+		# "on_trash": "method"
 	},
 	("Quotation", "Sales Order", "Sales Invoice"): {
 		"validate": ["taxjar_integration.taxjar_integration.taxjar_integration.set_sales_tax"]
@@ -188,3 +188,6 @@ doc_events = {
 # auth_hooks = [
 #	"taxjar_integration.auth.validate"
 # ]
+
+# Automatically update python controller files with type annotations for this app.
+export_python_type_annotations = True

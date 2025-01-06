@@ -1,2 +1,2 @@
 # frappe -- https://github.com/frappe/frappe is installed via 'bench init'
-taxjar~=1.9.2
+taxjar~=2.0.0
