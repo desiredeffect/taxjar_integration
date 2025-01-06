@@ -106,7 +106,7 @@ doc_events = {
 	"Sales Invoice": {
 		"on_submit": "taxjar_integration.taxjar_integration.taxjar_integration.create_transaction",
 		"on_cancel": "taxjar_integration.taxjar_integration.taxjar_integration.delete_transaction",
-		"on_trash": "method"
+		# "on_trash": "method"
 	},
 	("Quotation", "Sales Order", "Sales Invoice"): {
 		"validate": ["taxjar_integration.taxjar_integration.taxjar_integration.set_sales_tax"]
